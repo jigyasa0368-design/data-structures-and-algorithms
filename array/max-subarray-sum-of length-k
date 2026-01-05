@@ -1,0 +1,27 @@
+// Problem: Max SubArray of length k
+// Platform: GFG
+// Approach: sliding window
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class Solution {
+  public:
+    int maxSubarraySum(vector<int>& arr, int k) {
+        int windowsum=0;
+        int maxsum=0;
+        // code here
+        for(int i=0; i<k;i++){
+            windowsum+=arr[i];
+            
+        }
+        maxsum=windowsum;
+        
+        for(int i=k;i<arr.size();i++){
+            windowsum+=arr[i];
+            windowsum-=arr[i-k];
+            maxsum=max(maxsum,windowsum);
+        }
+        return maxsum;
+        
+    }
+};
