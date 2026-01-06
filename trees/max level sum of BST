@@ -1,0 +1,41 @@
+// Problem: max level sum of BST
+// Platform: Leetcode
+// Approach: using queue
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+
+class Solution {
+public:
+    int maxLevelSum(TreeNode* root) {
+        queue<TreeNode*>qu;
+        int anslevel=1;
+        int level=1;
+      
+        long long  maxsum=root->val;
+        qu.push(root);
+        while(!qu.empty()){
+            int sz=qu.size();
+              int currsum=0;
+
+
+            for(int i=0;i<sz;i++){
+                TreeNode* node=qu.front();
+                qu.pop();
+
+                currsum+=node->val;
+                if(node->left) qu.push(node->left) ;
+                if(node->right) qu.push(node->right) ;
+            }
+
+            if(currsum>maxsum){
+                maxsum=currsum;
+                anslevel=level;
+            }
+             level++;
+        }
+       
+
+     return anslevel;   
+    }
+};
