@@ -1,4 +1,4 @@
-// Problem: delete node in a LL
+// Problem: delete node in a LL(solve without using head)
 // Platform: Leetcode
 // Approach: sliding window
 // Time Complexity: O(1)
