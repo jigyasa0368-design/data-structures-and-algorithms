@@ -2,7 +2,7 @@
 // Platform: Leetcode
 // Approach: DFS
 // Time Complexity: O(n)
-// Space Complexity: O(n)
+// Space Complexity: O(n log n)
 
 class Solution {
 public:
