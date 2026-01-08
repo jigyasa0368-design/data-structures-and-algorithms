@@ -3,7 +3,7 @@
 // Approach: fast & slow pointer
 // Time Complexity: O(n)
 // Space Complexity: O(1)
-
+// if we have even node i.e two middle node we take m2 as middle node 
 
 
 
