@@ -1,0 +1,17 @@
+// Problem: max depth of BT
+// Platform: Leetcode
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+    if(root==NULL) return 0;
+     int l=maxDepth(root->left);
+     int r=maxDepth(root->right);
+      int ans= 1+max(l,r);
+     return ans;
+        
+    }
+    
+};
