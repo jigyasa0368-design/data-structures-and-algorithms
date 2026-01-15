@@ -1,7 +1,7 @@
 // Problem: remove nth node from end of LL
 // Platform: Leetcode
 // Approach: slow & fast pointer
-// Time Complexity: O(len)
+// Time Complexity: O(len) where,len is length
 // Space Complexity: O(1)
 
 
@@ -26,7 +26,6 @@ public:
             fast=fast->next;
         }
        
-        
         ListNode* delnode=slow->next;
         slow->next=slow->next->next;
         delete delnode;
