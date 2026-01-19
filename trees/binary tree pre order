@@ -8,7 +8,7 @@ public:
     void preorder(TreeNode* root, vector<int>& ans) {
         if (root == NULL) return;
 
-        ans.push_back(root->val);          // Root
+        ans.push_back(root->val);          // Root  preorde(root->left->right)
         preorder(root->left, ans);         // Left
         preorder(root->right, ans);        // Right
     }
