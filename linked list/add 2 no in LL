@@ -1,13 +1,13 @@
 // Problem: add 2 no in LL 
 // Platform: leetcode
 // Approach: using reverse LL
-// Time Complexity: O(n + m)
+// Time Complexity: O(n + m)            
 // Space Complexity: O(1)
 
 class Solution {
 public:
     
-    // function to reverse linked list
+    
     ListNode* reverse(ListNode* head) {
         ListNode* prev = NULL;
         while (head != NULL) {
