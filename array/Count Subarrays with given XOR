@@ -1,0 +1,23 @@
+// Problem: Count Subarrays with given XOR
+// Platform: GFG
+// Time Complexity: O(n log n)
+// Space Complexity: O(n)
+
+class Solution {
+  public:
+    long subarrayXor(vector<int> &arr, int k) {
+
+        map<int,int>mpp;
+        int prefixxor=0;
+        int cnt=0;
+       mpp[0]=1;
+        for(int i=0;i<arr.size();i++){
+              prefixxor^=arr[i];
+              int remove=prefixxor^k;
+              cnt+=mpp[remove];
+              mpp[prefixxor]++;
+        }
+      return cnt;  
+    
+    }
+};
