@@ -1,0 +1,29 @@
+// Problem: pascal triangle
+// Platform: leetcode
+// Time Complexity: O(n^2)
+// Space Complexity: O(n^2)
+
+
+
+class Solution {
+public:
+     vector<int>generaterows(int numRows){
+        vector<int>ansrows;
+        long long ans=1;
+        ansrows.push_back(1);
+        for(int i=1;i<numRows;i++){
+            ans*=(numRows-i);
+            ans/=i;
+            ansrows.push_back(ans);
+        }
+        return ansrows;
+     }
+    vector<vector<int>> generate(int numRows) {
+     vector<vector<int>>ans;
+     for(int i=1;i<=numRows;i++){
+        ans.push_back(generaterows(i));
+     }
+return ans;
+        
+    }
+};
