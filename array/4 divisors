@@ -1,5 +1,5 @@
 // Problem: 4 divisors
-// Platform: Leetcode
+// Platform: leetcode
 // Time Complexity: O(n* root m)
 // Space Complexity: O(1)
 
