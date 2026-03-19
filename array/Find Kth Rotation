@@ -21,11 +21,10 @@ class Solution {
             int next = (mid + 1) % n;
             int prev = (mid - 1 + n) % n;
             
-            // Minimum element found
+         
             if (arr[mid] <= arr[next] && arr[mid] <= arr[prev]) {
                 return mid;
             }
-            
             // Left part sorted
             if (arr[low] <= arr[mid]) {
                 low = mid + 1;
