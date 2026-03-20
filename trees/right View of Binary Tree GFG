@@ -1,6 +1,7 @@
 // Problem: right View of Binary Tree
 // Platform: GFG
-// Time Complexity: O(n)
+// Time Complexity: O(n)   using recursion
+
 // Space Complexity: O(h)
 
 
