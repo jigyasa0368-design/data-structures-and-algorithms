@@ -1,7 +1,7 @@
 // Problem:binary tree in order
 // Platform: leetcode
 // Time Complexity: O(n)
-// Space Complexity: O(h) h=height of tree
+// Space Complexity: O(h)   h=height of tree
 
 class Solution {
 public:
