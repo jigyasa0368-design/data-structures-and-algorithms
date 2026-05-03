@@ -1,4 +1,4 @@
-// Problem: remove duplicates from array
+// Problem: remove duplicates from sorted array
 // Platform: leetcode
 // Time Complexity: O(n)
 // Space Complexity: O(1)
