@@ -1,6 +1,6 @@
 // Problem: sort 0s,1s ,2s
 // Platform: GFG
-// Approach: 2 pointer
+// Approach: dutch flag national algo
 // Time Complexity: O(n)
 // Space Complexity: O(1)
 
