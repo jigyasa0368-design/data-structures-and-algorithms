@@ -2,6 +2,7 @@
 // Platform: leetcode
 // Time Complexity: O(n)
 // Space Complexity: O(n)
+// Approach : 2 pointer
 
 
 class Solution {
