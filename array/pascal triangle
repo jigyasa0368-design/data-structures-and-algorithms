@@ -1,7 +1,8 @@
 // Problem: pascal triangle
 // Platform: leetcode
 // Time Complexity: O(n^2)
-// Space Complexity: O(n^2)           taking extra space
+// Space Complexity: O(n^2)      
+// Approach: recursion            
 
 class Solution {
 public:
