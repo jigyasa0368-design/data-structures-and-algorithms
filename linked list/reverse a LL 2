@@ -1,0 +1,25 @@
+// Problem: reverse a LL 2
+// Platform: Leetcode
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// Approach: in place reversal
+
+
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if(head==NULL || head->next==NULL) return head; 
+        ListNode* current=head;
+       
+        ListNode* prev=NULL;
+        while(current!=NULL){
+            ListNode* nextnode=current->next;
+            current->next=prev;
+            prev=current;
+            current=nextnode;     
+
+        }
+    return prev;
+    }
+};
