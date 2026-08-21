@@ -6,20 +6,36 @@
 
 
 
+
 class Solution {
 public:
-    ListNode* reverseList(ListNode* head) {
-        if(head==NULL || head->next==NULL) return head; 
-        ListNode* current=head;
-       
-        ListNode* prev=NULL;
-        while(current!=NULL){
-            ListNode* nextnode=current->next;
-            current->next=prev;
-            prev=current;
-            current=nextnode;     
+    ListNode* reverseBetween(ListNode* head, int left, int right) {
+        if (head == NULL || left == right)
+            return head;
+        ListNode* prev=nullptr;
+        ListNode* curr=head;
+         for (int i = 1; i < left; i++) {
+            prev=curr;
+            curr=curr->next;
+        } 
+        ListNode* before=prev;
+        ListNode* leftnode=curr;
+        prev=nullptr;
+        for (int i = left; i <=right; i++){
+            ListNode* front = curr->next;
+            curr->next=prev;
+            prev=curr;
+            curr=front;
+        } 
+         if(before!=nullptr){
+            before->next=prev;
+         }
+         else{
+            head=prev;
+         }
+         leftnode->next=curr;
 
-        }
-    return prev;
+     return head;
     }
+    
 };
