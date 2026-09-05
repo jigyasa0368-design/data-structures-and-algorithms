@@ -1,0 +1,22 @@
+// Problem: Climbing Stairs
+// Platform: Leetcode
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// Approach: DP
+
+
+class Solution {
+public:
+    int climbStairs(int n) {
+
+        int waysTwoStepsBack = 1;
+        int waysOneStepBack = 1;
+
+        for (int step = 2; step <= n; step++) {
+            int currentWays = waysOneStepBack + waysTwoStepsBack;
+            waysTwoStepsBack = waysOneStepBack;
+            waysOneStepBack = currentWays;
+        }
+        return waysOneStepBack;   
+    }
+};
